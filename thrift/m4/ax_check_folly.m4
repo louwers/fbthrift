@@ -36,7 +36,7 @@ AC_DEFUN([AX_CHECK_FOLLY], [
 
     succeeded=no
     if test "x$want_folly" = "xyes"; then
-        FOLLY_LIBS="-lfolly"
+        FOLLY_LIBS="-lfolly -latomic"
         for folly_dir in $folly_searchdirs; do
             AC_MSG_CHECKING([for folly/folly-config.h in $folly_dir])
             if test -f "$folly_dir/include/folly/folly-config.h"; then
